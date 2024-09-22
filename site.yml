@@ -1,13 +1,5 @@
 ---
-- name: local ansible versionscheck
-  hosts: localhost
-  roles:
-    - {role: version, tags: always, gather_facts: false}
-
-- name: basic setup on all hosts
+- name: Install git Server
   hosts: all
   roles:
-    - {role: base, tags: [default, packages, base]}
-    - {role: ranger, tags: [packages, ranger]}
-    - {role: bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}
-    - {role: dotfiles, tags: [default, dotfiles]}
+    - {role: l3d.git.gitea, tags: gite}
