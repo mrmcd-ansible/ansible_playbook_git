@@ -13,6 +13,11 @@ ansible-galaxy collection install -r requirements.yml --upgrade
 ```
 
 Install Required Pip3 Packages
-```
+```bash
 pip3 install --upgrade -r requirements.txt
+```
+
+**Example to install Ansible roles:**
+```bash
+ansible-galaxy role install -r requirements.yml --force
 ```
